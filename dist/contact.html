@@ -62,19 +62,33 @@
                     Phone:
                 </span> +60178820456
             </div>
-            <div>
+            <!-- <div>
                 <span class="text-secondary">
                     Address:
                 </span> KualaLumpur, Malaysia
-            </div>
+            </div> -->
+        </div>
+        <div class="contactForm" id="contactForm">
+            <h1 class="formHeader">Get In Touch...</h1>
+            <div class="alert">You message has been sent!</div>
+            <form method="post" action="">
+                <input type="text" name="name" class="question" id="name" required autocomplete="off" />
+                <label for="nme"><span>Name</span></label>
+                <input type="text" name="email" class="question" id="email" required autocomplete="off" />
+                <label for="nme"><span>Email</span></label>
+                <textarea name="message" rows="5" class="question" id="msg" required autocomplete="off"></textarea>
+                <label for="msg"><span>What's your message?</span></label>
+                <input class="submit" type="submit" name="submit" value="Submit!" />
+            </form>
         </div>
     </main>
 
     <footer id="main-footer">
         Copyright &copy; 2018
     </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contactForm.js"></script>
 </body>
 
 </html>

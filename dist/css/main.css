@@ -54,8 +54,8 @@
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
       width: 250px;
-      height: 248px;
-      background: url("../img/ismaeel.jpg");
+      height: 250px;
+      background: url("../img/essiOrg.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -101,9 +101,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url("../img/background 3.jpg") no-repeat center;
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-backface-visibility: hidden; }
     body#bg-img:after {
       content: "";
       position: absolute;
@@ -112,7 +116,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(68, 68, 68, 0.7); }
 
 h1,
 h2,
@@ -128,7 +132,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    display: inline-block; }
 
 a {
   color: white;
@@ -170,6 +174,8 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+    .about-info .bio a {
+      color: #eece1a; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -186,8 +192,7 @@ main {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
+    width: 100%; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #eece1a;
@@ -197,13 +202,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
+  align-items: center; }
   .boxes div {
     font-size: 1rem;
     border: 1px #fff solid;
     padding: 0.75rem 1.25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       background: #eece1a;
@@ -236,9 +240,173 @@ main {
   color: white;
   height: 60px; }
 
+.a-icons {
+  margin-top: 1rem;
+  text-align: center; }
+  .a-icons i {
+    padding: 0.4rem;
+    color: #eece1a; }
+    .a-icons i:hover {
+      color: #fff;
+      transition: all 0.5s ease-out; }
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5; }
+
+.submit {
+  width: 50%;
+  background-color: #eece1a;
+  color: #333;
+  padding: 14px 20px;
+  margin: 8px 25%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+input[type="submit"]:hover {
+  opacity: 0.9; }
+
+.contactForm {
+  border-radius: 5px;
+  background-color: #333;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* Question */
+  /* Underline and Placeholder */ }
+  .contactForm .formHeader {
+    text-align: center;
+    margin-bottom: 20px; }
+  .contactForm input[type="text"],
+  .contactForm input[type="email"],
+  .contactForm span,
+  .contactForm label,
+  .contactForm textarea {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+  .contactForm textarea:focus,
+  .contactForm input[type="email"],
+  .contactForm input[type="text"]:focus {
+    outline: 0; }
+  .contactForm input[type="text"].question,
+  .contactForm input[type="email"].question,
+  .contactForm textarea.question {
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 10px;
+    border: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+    /* Hack to make "rows" attribute apply in Firefox. */ }
+  .contactForm input[type="text"].question + label,
+  .contactForm input[type="email"].question + label,
+  .contactForm textarea.question + label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    border-top: 1px solid #eece1a;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px; }
+  .contactForm input[type="text"].question:focus + label,
+  .contactForm input[type="email"].question:focus + label,
+  .contactForm textarea.question:focus + label {
+    width: 100%; }
+  .contactForm input[type="text"].question:focus,
+  .contactForm input[type="email"].question:focus,
+  .contactForm input[type="text"].question:valid,
+  .contactForm input[type="email"].question:valid {
+    padding-top: 35px; }
+  .contactForm textarea.question:valid,
+  .contactForm textarea.question:focus {
+    margin-top: 35px; }
+  .contactForm input[type="text"].question:focus + label > span,
+  .contactForm input[type="email"].question:focus + label > span,
+  .contactForm input[type="text"].question:valid + label > span,
+  .contactForm input[type="email"].question:valid + label > span {
+    top: -75px;
+    font-size: 22px;
+    color: #fff; }
+  .contactForm textarea.question:focus + label > span,
+  .contactForm textarea.question:valid + label > span {
+    top: -160px;
+    font-size: 22px;
+    color: #fff; }
+  .contactForm input[type="text"].question:valid + label,
+  .contactForm input[type="email"].question:valid + label,
+  .contactForm textarea.question:valid + label {
+    border-color: green; }
+  .contactForm input[type="text"].question:invalid,
+  .contactForm input[type="email"].question:invalid,
+  .contactForm textarea.question:invalid {
+    box-shadow: none; }
+  .contactForm input[type="text"].question + label > span,
+  .contactForm input[type="email"].question + label > span,
+  .contactForm textarea.question + label > span {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 1rem;
+    top: -40px;
+    left: 0px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease; }
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1; } }
+
+@keyframes appear {
+  100% {
+    opacity: 1; } }
+
+.alert {
+  text-align: center;
+  color: green;
+  display: none; }
+
+.contactForm {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px; }
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0); }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0); } }
+
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .contactForm {
+    width: 60%; } }
 
 @media screen and (min-width: 769) and (max-width: 1170px) {
   .projects {
@@ -251,6 +419,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  .contactForm {
+    width: 98%; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -267,9 +437,9 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/ismaeelmini.jpg");
-      width: 150px;
-      height: 149px; }
+      background: url("../img/essiOrgMinitest.jpg");
+      width: 132px;
+      height: 135px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -277,7 +447,38 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  body {
+    height: 100vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .submit {
+      width: 80%;
+      background-color: #eece1a;
+      color: #333;
+      padding: 14px 20px;
+      margin-top: 25px;
+      margin-left: 10%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 4rem; }
+    main .sm-heading {
+      font-size: 1.2rem;
+      display: block;
+      padding: 0;
+      margin: 45px 0; }
+    main .contactForm {
+      width: 100%; }
+    main .bio p {
+      font-size: 1.1rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .menu .nav-link {
+    font-size: 25px; } }

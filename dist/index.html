@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Welcome To My Portfolio</title>
 </head>
 
@@ -54,25 +55,35 @@
             Ismaeel <span class="text-secondary">Yaghoubi</span>
         </h1>
         <h2 class="sm-heading">
-            Web Developer, Programmer, Desinger
+            <span class="typed-strings"></span>
         </h2>
         <div class="icons">
-            <a href="#!">
+            <a target="_blank" href="https://twitter.com/ismaeeling">
                 <i class="fab fa-twitter fa-2x"></i>
             </a>
-            <a href="#!">
+            <a target="_blank" href="https://www.facebook.com/esmaeel.yaghoobi">
                 <i class="fab fa-facebook fa-2x"></i>
             </a>
-            <a href="#!">
-                <i class="fab fa-linkedin fa-2x"></i>
+            <a target="_blank" href="https://www.instagram.com/ismaeeling/?hl=en">
+                <i class="fab fa-instagram fa-2x"></i>
             </a>
-            <a href="#!">
-                <i class="fab fa-github fa-2x"></i>
+            <a target="_blank" href="https://www.linkedin.com/in/ismaeel-yaghoubi-55ab6a150/">
+                <i class="fab fa-linkedin fa-2x"></i>
             </a>
         </div>
     </main>
-
+    <script src="js/lib/typed.js"></script>
     <script src="js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> -->
+    <script>
+        var typed3 = new Typed('.typed-strings', {
+            strings: ['^1000', 'I\'m a <strong>Web Developer</strong>', 'I\'m a <strong>Web Designer</strong>', 'I\'m a <strong>Wordpress Developer</strong>', 'I\'m a <strong>Photographer</strong>'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            smartBackspace: true, // this is a default
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
